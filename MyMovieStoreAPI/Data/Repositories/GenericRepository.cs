@@ -44,5 +44,10 @@ namespace MyMovieStoreAPI.Data.Repositories
         {
             _context.Set<T>().RemoveRange(entities);
         }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+        }
     }
 }

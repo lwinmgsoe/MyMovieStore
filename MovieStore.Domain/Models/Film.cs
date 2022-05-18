@@ -1,7 +1,8 @@
-﻿using MovieStore.Domain.Models;
+﻿using MovieStore.Domain.DTOS;
+using MovieStore.Domain.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace MyMovieStore.Domain.Models
+namespace MovieStore.Domain.Models
 {
     public class Film
     {
@@ -29,6 +30,22 @@ namespace MyMovieStore.Domain.Models
         public Film()
         {
             Casts = new List<BasicActorCast>();
+        }
+        public Film(FilmDTO dto)
+        {
+            Id = dto.Id;
+            Name = dto.Name;
+            DirectorId = dto.DirectorId;
+            LanguageId = dto.LanguageId;
+            CountryId = dto.CountryId;
+            StudioId = dto.StudioId;
+            Synopsis = dto.Synopsis;
+            RunTimeMinutes = dto.RunTimeMinutes;
+            CertificateId = dto.CertificateId;
+            BudgetDollars = dto.BudgetDollars;
+            BoxOfficeDollars = dto.BoxOfficeDollars;
+            OscarNominations = dto.OscarNominations;
+            OscarWins = dto.OscarWins;
         }
     }
 }

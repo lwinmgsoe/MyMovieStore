@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MyMovieStore.Domain.Models
+namespace MovieStore.Domain.Models
 {
     public class Actor
     {
