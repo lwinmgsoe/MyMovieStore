@@ -78,7 +78,7 @@ namespace MyMovieStoreAPI.Controllers
                 return StatusCode(500);
             }
         }
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public IActionResult Delete(int id)
         {
             try
